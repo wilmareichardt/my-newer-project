@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ball Page</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0acb1;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    font-family: Helvetica, sans-serif; /* Set font family */
+  }
+
+  .red-ball {
+    width: 5px; /* Adjusted starting small size */
+    height: 5px; /* Adjusted starting small size */
+    border-radius: 50%;
+    background-color: #fc4a3e;
+    position: relative;
+    animation: grow 10s ease forwards; /* Grow animation */
+    animation-delay: 10s; /* Delay animation start by 10 seconds */
+  }
+
+  .yellow-ball {
+    width: 800px; /* Initial big size */
+    height: 800px; /* Initial big size */
+    border-radius: 50%;
+    background-color: #00d1ae;
+    position: absolute;
+    bottom: 2px; /* Adjusted position to be inside the red ball */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%) scale(1); /* Starting scale for the yellow ball */
+    animation: shrink 15s ease forwards; /* Shrink animation */
+    animation-delay: 10s; /* Delay animation start by 10 seconds */
+  }
+
+  .text {
+    position: absolute;
+    bottom: 780px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 1;
+    font-size: 40px; /* Set font size */
+    animation: fadeOut 2s ease forwards; /* Fade out animation */
+    animation-delay: 9s; /* Delay fade out animation by 9 seconds */
+  }
+
+  .text span {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+  }
+
+  .subtext {
+    position: absolute;
+    bottom: 730px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 1;
+    font-size: 40px; /* Set font size */
+    animation: fadeOut 2s ease forwards; /* Fade out animation */
+    animation-delay: 9s; /* Delay fade out animation by 9 seconds */
+  }
+
+  .subtext span {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+    animation-delay: 1s; /* Delay animation */
+  }
+
+  .elon-musk-text {
+    position: absolute;
+    bottom: 450px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 0;
+    font-size: 50px; /* Set font size */
+    animation: fadeIn 2s ease forwards 16s, fadeOutElon 2s ease forwards 19s; /* Fade in and out animation */
+  }
+
+  .elon-musk-text span {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+  }
+
+  .elon-musk-income {
+    position: absolute;
+    bottom: 450px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 0;
+    font-size: 50px; /* Set font size */
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+    animation-delay: 20s; /* Delay fade in animation by 9 seconds */
+  }
+
+  .elon-musk-income span {
+    opacity: 0;
+    animation: fadeIn 7s ease forwards; /* Fade in animation */
+    animation-delay: 2s; /* Delay animation */
+  }
+
+  .additional-text {
+    position: absolute;
+    bottom: 400px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 0;
+    font-size: 30px; /* Set font size */
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+    animation-delay: 25s; /* Delay fade in animation by 25 seconds */
+  }
+
+  .additional-text span {
+    opacity: 0;
+    animation: fadeIn 5s ease forwards; /* Fade in animation */
+    animation-delay: 0s; /* Delay animation */
+  }
+
+  .additional-text-2 {
+    position: absolute;
+    bottom: 350px; /* Adjusted position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%);
+    color: black;
+    opacity: 0;
+    font-size: 30px; /* Set font size */
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+    animation-delay: 30s; /* Delay fade in animation by 30 seconds */
+  }
+
+  .additional-text-2 span {
+    opacity: 0;
+    animation: fadeIn 5s ease forwards; /* Fade in animation */
+    animation-delay: 0s; /* Delay animation */
+  }
+
+  @keyframes grow {
+    0% {
+      width: 5px; /* Starting small size */
+      height: 5px; /* Starting small size */
+    }
+    100% {
+      width: 800px; /* Final big size */
+      height: 800px; /* Final big size */
+    }
+  }
+
+  @keyframes shrink {
+    0% {
+      width: 800px; /* Starting big size */
+      height: 800px; /* Starting big size */
+    }
+    100% {
+      width: 2px; /* Final small size */
+      height: 2px; /* Final small size */
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeOutElon {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="red-ball">
+    <div class="yellow-ball"></div>
+  </div>
+  <div class="text"><span>THE AVERAGE PERSON</span></div>
+  <div class="subtext"><span>MAKES $9,733 A YEAR</span></div>
+  <div class="elon-musk-text"><span>ELON MUSK MAKES</span></div>
+  <div class="elon-musk-income"><span>$18,327,000,000</span></div>
+  <div class="additional-text"><span>or $50,210,958 million a day</span></div>
+  <div class="additional-text-2"><span>or $34,868 every minute</span></div>
+</body>
+</html>
